@@ -1,9 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <getopt.h>
 int main (int argc, char *argv[]) {
    pid_t childpid = 0;
    int i, n;
+   int opt;
+   int options;
+
+   while((options = getopt(argc, argv, "hpcsi")) != -1){
+	switch (options){
+		case 'h':
+			break;
+		case 'p':
+			break;
+		case 'c':
+			break;
+		case 's':
+			break;
+		case 'i':
+			break;
+	}
+}
    if (argc != 2) {
       fprintf(stderr, "Usage: %s processes\n",argv[0]);
       return 1;
